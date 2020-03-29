@@ -30,6 +30,7 @@ aside {
       width: 120px; }
       .profile .person-photo img {
         border-radius: 50%;
+        border: 2px solid #243E36;
         width: 100%; }
   .profile .contact {
     background-color: #88752b; }
