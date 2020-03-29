@@ -1,0 +1,226 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+$profileBg:#F1F7ED;
+$experienceBg:#243E36;
+$profileColor:#243E36;
+$experienceColor:#E0EEC6; 
+$linkColor:#C2A83E;
+$contactColor:#88752b;
+$boldColor:#4a4e51;
+$time:0.6s;
+
+*, *::after, *::before {
+    box-sizing:border-box;
+}
+
+html, body {
+    height: 100%;
+}
+  
+main {
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+aside {
+    width: 80%;
+}
+
+.profile {
+    height: 100%;
+    background-color: $profileBg;
+    color: $profileColor;
+    display: flex;
+    flex-direction: column;
+
+    &-element {
+        padding: 30px;
+
+        &.contact {
+            padding: 10px 30px;
+        }
+    }
+
+    .person {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        background-color: $linkColor;
+
+        &-photo {
+            width: 120px;
+            img {
+                border-radius: 50%;
+                width: 100%;
+            }
+        }
+    }
+
+    .contact {
+        background-color: $contactColor;
+
+        i {
+            padding-left: 5px;
+        };
+
+        a, a:hover {
+            padding-left: 5px;
+            color: $profileColor;
+            font-weight: 500;
+        }
+    }
+
+    .languages {
+        &-list {
+            list-style: none;
+            padding-inline-start: 0px;
+
+            &-element {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 380px;
+            }
+        }
+
+        .dot {
+            margin-left: 10px;
+            height: 25px;
+            width: 25px;
+            border: 2px solid $profileColor;
+            border-radius: 50%;
+            display: inline-block;
+
+            &-full {
+                background-color: $profileColor;
+            }
+          }
+    }
+
+    .interests {
+        &-list {
+            list-style: none;
+            padding-inline-start: 0px;
+            display: flex;
+            flex-wrap: wrap;
+
+            &-element {
+                border-radius: 15px;
+                border: 2px solid $linkColor;
+                padding: 20px; 
+                width: 180px;
+                height: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:nth-of-type(2), &:nth-of-type(3) {
+                    margin-left: 10px;
+                }
+
+                &:nth-of-type(4) {
+                    margin-top: 10px;
+                }
+                
+            }
+        }
+    }
+}
+
+.experience {
+    background-color: $experienceBg;
+    color: $experienceColor;
+    padding: 50px;
+
+    .work {
+        &-list {
+            list-style: none;
+            padding-inline-start: 0px;
+
+            &-element {
+                display: flex;
+
+                & > * {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .education {
+        &-list {
+            list-style: none;
+            padding-inline-start: 0px;
+
+            &-element {
+                display: flex;
+
+                & > * {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .skills {
+        &-list {
+            list-style: none;
+            padding-inline-start: 0px;
+        }
+
+        .skill-percentage {
+            max-width: 380px;
+            margin-bottom: 10px;
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 6px;
+              background: $boldColor;
+              display: block;
+              margin-top: 3px;
+            }
+
+            &::before {
+              content: "";
+              height: 6px;
+              background: $linkColor;
+              position: absolute;
+              margin-top: 3px;
+              bottom: 0;
+            }
+
+            &:nth-child(1)::before { width:70%; animation: skill_1 $time ease; }
+            &:nth-child(2)::before { width:60%; animation: skill_2 $time ease; } 
+            &:nth-child(3)::before { width:60%; animation: skill_3 $time ease; }
+            &:nth-child(4)::before { width:50%; animation: skill_4 $time ease; }
+            &:nth-child(5)::before { width:80%; animation: skill_5 $time ease; }
+            &:nth-child(6)::before { width:65%; animation: skill_6 $time ease; }
+            &:nth-child(7)::before { width:0%; animation: skill_6 $time ease; }
+          }
+    }
+}
+
+@media (max-width: 1600px) {
+    .interests-list-element {
+        &:nth-of-type(3) {
+            margin-left: 0px !important;
+            margin-top: 10px;
+        }
+
+        &:nth-of-type(4) {
+            margin-left: 10px;
+        }
+    }
+}
+
+@keyframes skill_1 {from {width:0%;}to {width:70%;}}
+@keyframes skill_2 {from {width:0%;}to {width:60%;}}
+@keyframes skill_3 {from {width:0%;}to {width:60%;}}
+@keyframes skill_4 {from {width:0%;}to {width:50%;}}
+@keyframes skill_5 {from {width:0%;}to {width:80%;}}  
+@keyframes skill_6 {from {width:0%;}to {width:65%;}}
+@keyframes skill_7 {from {width:0%;}to {width:70%;}}

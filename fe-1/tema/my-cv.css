@@ -1,0 +1,184 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+main {
+  position: relative;
+  height: 100%;
+  display: flex; }
+
+aside {
+  width: 80%; }
+
+.profile {
+  height: 100%;
+  background-color: #F1F7ED;
+  color: #243E36;
+  display: flex;
+  flex-direction: column; }
+  .profile-element {
+    padding: 30px; }
+    .profile-element.contact {
+      padding: 10px 30px; }
+  .profile .person {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #C2A83E; }
+    .profile .person-photo {
+      width: 120px; }
+      .profile .person-photo img {
+        border-radius: 50%;
+        width: 100%; }
+  .profile .contact {
+    background-color: #88752b; }
+    .profile .contact i {
+      padding-left: 5px; }
+    .profile .contact a, .profile .contact a:hover {
+      padding-left: 5px;
+      color: #243E36;
+      font-weight: 500; }
+  .profile .languages-list {
+    list-style: none;
+    padding-inline-start: 0px; }
+    .profile .languages-list-element {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 380px; }
+  .profile .languages .dot {
+    margin-left: 10px;
+    height: 25px;
+    width: 25px;
+    border: 2px solid #243E36;
+    border-radius: 50%;
+    display: inline-block; }
+    .profile .languages .dot-full {
+      background-color: #243E36; }
+  .profile .interests-list {
+    list-style: none;
+    padding-inline-start: 0px;
+    display: flex;
+    flex-wrap: wrap; }
+    .profile .interests-list-element {
+      border-radius: 15px;
+      border: 2px solid #C2A83E;
+      padding: 20px;
+      width: 180px;
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .profile .interests-list-element:nth-of-type(2), .profile .interests-list-element:nth-of-type(3) {
+        margin-left: 10px; }
+      .profile .interests-list-element:nth-of-type(4) {
+        margin-top: 10px; }
+
+.experience {
+  background-color: #243E36;
+  color: #E0EEC6;
+  padding: 50px; }
+  .experience .work-list {
+    list-style: none;
+    padding-inline-start: 0px; }
+    .experience .work-list-element {
+      display: flex; }
+      .experience .work-list-element > * {
+        flex: 1; }
+  .experience .education-list {
+    list-style: none;
+    padding-inline-start: 0px; }
+    .experience .education-list-element {
+      display: flex; }
+      .experience .education-list-element > * {
+        flex: 1; }
+  .experience .skills-list {
+    list-style: none;
+    padding-inline-start: 0px; }
+  .experience .skills .skill-percentage {
+    max-width: 380px;
+    margin-bottom: 10px;
+    position: relative; }
+    .experience .skills .skill-percentage::after {
+      content: "";
+      width: 100%;
+      height: 6px;
+      background: #4a4e51;
+      display: block;
+      margin-top: 3px; }
+    .experience .skills .skill-percentage::before {
+      content: "";
+      height: 6px;
+      background: #C2A83E;
+      position: absolute;
+      margin-top: 3px;
+      bottom: 0; }
+    .experience .skills .skill-percentage:nth-child(1)::before {
+      width: 70%;
+      animation: skill_1 0.6s ease; }
+    .experience .skills .skill-percentage:nth-child(2)::before {
+      width: 60%;
+      animation: skill_2 0.6s ease; }
+    .experience .skills .skill-percentage:nth-child(3)::before {
+      width: 60%;
+      animation: skill_3 0.6s ease; }
+    .experience .skills .skill-percentage:nth-child(4)::before {
+      width: 50%;
+      animation: skill_4 0.6s ease; }
+    .experience .skills .skill-percentage:nth-child(5)::before {
+      width: 80%;
+      animation: skill_5 0.6s ease; }
+    .experience .skills .skill-percentage:nth-child(6)::before {
+      width: 65%;
+      animation: skill_6 0.6s ease; }
+    .experience .skills .skill-percentage:nth-child(7)::before {
+      width: 0%;
+      animation: skill_6 0.6s ease; }
+
+@media (max-width: 1600px) {
+  .interests-list-element:nth-of-type(3) {
+    margin-left: 0px !important;
+    margin-top: 10px; }
+  .interests-list-element:nth-of-type(4) {
+    margin-left: 10px; } }
+@keyframes skill_1 {
+  from {
+    width: 0%; }
+  to {
+    width: 70%; } }
+@keyframes skill_2 {
+  from {
+    width: 0%; }
+  to {
+    width: 60%; } }
+@keyframes skill_3 {
+  from {
+    width: 0%; }
+  to {
+    width: 60%; } }
+@keyframes skill_4 {
+  from {
+    width: 0%; }
+  to {
+    width: 50%; } }
+@keyframes skill_5 {
+  from {
+    width: 0%; }
+  to {
+    width: 80%; } }
+@keyframes skill_6 {
+  from {
+    width: 0%; }
+  to {
+    width: 65%; } }
+@keyframes skill_7 {
+  from {
+    width: 0%; }
+  to {
+    width: 70%; } }
+
+/*# sourceMappingURL=my-cv.css.map */
