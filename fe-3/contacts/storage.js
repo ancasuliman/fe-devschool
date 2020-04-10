@@ -13,3 +13,13 @@ export function append(contact) {
     contacts.push(contact);
     write(contacts);
 }
+
+export function remove(contact) {
+    let contacts = read();
+    contacts = contacts.filter(function(element) {
+        return (element.name !== contact.name) &&
+            (element.email !== contact.email) &&
+            (element.phone !== contact.phone);
+    });
+    write(contacts);
+}
