@@ -26,6 +26,7 @@ function onSubmitDelete(event) {
     
     // identify checked checkboxes
     const checkedBoxes = document.querySelectorAll('input[name=delete]:checked');
+    const deleteButton = document.getElementById('buttonDelete');
     
     // build list of li elements that contain checked checkboxes
     if (checkedBoxes !== []) {
@@ -41,6 +42,8 @@ function onSubmitDelete(event) {
         })
     
         contactsToDelete.forEach(contact => remove(contact));
+        deleteButton.disabled = true;
+
         render();
     }
 }
