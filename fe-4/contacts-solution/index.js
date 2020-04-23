@@ -4,7 +4,7 @@ export function init() {
   document.getElementById('form-add').addEventListener('submit', onSubmitAdd);
   document.getElementById('form-edit').addEventListener('submit', onSubmitDelete);
   document.getElementById('form-edit').addEventListener('change', onChangeDelete);
-  // navigator.serviceWorker.register('sw.js');
+  navigator.serviceWorker.register('sw.js');
   render();
 }
 
