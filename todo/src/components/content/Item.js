@@ -3,16 +3,16 @@ import { LitElement, html, css } from 'lit-element';
 export class Item extends LitElement {
   static get styles() {
     return css`
-      li {
+      .todo-item {
         display: flex;
         flex-direction: row;
       }
 
-      li p {
+      .todo-item p {
         width: 90%;
       }
 
-      li button {
+      .todo-item button {
         cursor: pointer;
         width: 10%;
         border: none;
@@ -25,7 +25,7 @@ export class Item extends LitElement {
         border-radius: 0;
       }
 
-      li button:hover {
+      .todo-item button:hover {
         background-color: #bbb;
         border: none;
       }
@@ -40,10 +40,10 @@ export class Item extends LitElement {
 
   render() {
     return html`
-      <li>
+      <div class="todo-item">
         <p>${this.item.todo}</p>
         <button @click=${this._onDeleteItem}>x</button>
-      </li>
+      </div>
     `;
   }
 

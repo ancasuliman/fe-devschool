@@ -9,17 +9,6 @@ export class Items extends LitElement {
     return css`
       section {
         padding: 0 40px;
-      }
-
-      ul {
-        margin: 0;
-        padding: 0;
-      }
-
-      ul {
-        cursor: pointer;
-        position: relative;
-        list-style-type: none;
         font-size: 18px;
       }
 
@@ -65,9 +54,9 @@ export class Items extends LitElement {
     return html`
       <section>
         <h2>Your current tasks:</h2>
-        <ul>
+        <div>
           ${this.buildTodoElements()}
-        </ul>
+        </div>
       </section>
     `;
   }
