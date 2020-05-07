@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "lint": "eslint . && prettier-eslint --list-different $PWD/**/*.js",
+    "format": "prettier-eslint --write $PWD/'**/*.js'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lit-element": "^2.3.1"
+    "babel-eslint": "^10.1.0",
+    "lit-element": "^2.3.1",
+    "prettier-eslint-cli": "^5.0.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
