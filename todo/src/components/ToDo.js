@@ -7,10 +7,6 @@ import './content/Items';
 import './footer/Footer';
 
 export class ToDo extends LitElement {
-  // static get styles() {
-  //   return css``;
-  // }
-
   static get properties() {
     return {
       todoItems: { type: Array },

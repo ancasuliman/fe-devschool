@@ -1,13 +1,17 @@
 import { LitElement, html, css } from 'lit-element';
 
 export class Footer extends LitElement {
-  // static get styles() {
-  //   return css``;
-  // }
-
-  // static get properties() {
-  //   return {};
-  // }
+  static get styles() {
+    return css`
+      footer {
+        box-sizing: border-box;
+        position: absolute;
+        padding: 0 40px;
+        width: 900px;
+        text-align: center;
+      }
+    `;
+  }
 
   render() {
     return html`

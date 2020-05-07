@@ -1,13 +1,15 @@
 import { LitElement, html, css } from 'lit-element';
 
 export class Header extends LitElement {
-  // static get styles() {
-  //   return css``;
-  // }
-
-  // static get properties() {
-  //   return {};
-  // }
+  static get styles() {
+    return css`
+      header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #adefd1ff;
+      }
+    `;
+  }
 
   render() {
     return html`
