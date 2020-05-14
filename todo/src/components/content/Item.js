@@ -8,8 +8,8 @@ export class Item extends LitElement {
         flex-direction: row;
       }
 
-      .todo-item p {
-        width: 90%;
+      .todo-item .todo-description {
+        width: 70%;
       }
 
       .todo-item button {
@@ -29,6 +29,27 @@ export class Item extends LitElement {
         background-color: #bbb;
         border: none;
       }
+
+      .todo-item .todo-dot {
+        margin-left: 10px;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      .todo-item .todo-category {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 20%;
+      }
+
+      .todo-item .todo-category-name {
+        margin-left: 20px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
     `;
   }
 
@@ -41,7 +62,11 @@ export class Item extends LitElement {
   render() {
     return html`
       <div class="todo-item">
-        <p>${this.item.todo}</p>
+        <p class="todo-description">${this.item.todo}</p>
+        <div class="todo-category">
+          <span class="todo-dot" style="background-color: ${this.item.color}"></span>
+          <p class="todo-category-name">${this.item.category}</p>
+        </div>
         <button @click=${this._onDeleteItem}>x</button>
       </div>
     `;
